@@ -1,0 +1,15 @@
+<form (submit)="onEditCity(editForm)" #editForm="ngForm">
+  <div class="form-group">
+    <label>City</label>
+    <input
+      type="text"
+      class="form-control"
+      ngModel
+      #cityInput="ngModel"
+      name="cityName"
+      required
+      [(ngModel)]="cityName"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,14 @@
+<form (submit)="onCreateCity(cityForm)" #cityForm="ngForm">
+  <div class="form-group">
+    <label>City</label>
+    <input
+      type="text"
+      class="form-control"
+      ngModel
+      #cityInput="ngModel"
+      name="city"
+      required
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,33 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">City</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let city of cities">
+        <td>{{ city.id }}</td>
+        <td>{{ city.name }}</td>
+        <td>
+          <a class="btn btn-primary" [routerLink]="['/editcity', city.id]"
+            >edit</a
+          >
+          <button class="mx-1 btn btn-danger" (click)="onDeleteCity(city.id)">
+            delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a
+    class="btn btn-primary"
+    [routerLink]="['/createcity', countryId]"
+    href="#"
+    role="button"
+    >Add city</a
+  >
+</div>

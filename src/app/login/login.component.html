@@ -1,0 +1,38 @@
+<!-- Main Content -->
+<div class="container-fluid">
+  <div class="row main-content text-center">
+    <div class="col-12 login_form">
+      <div class="container-fluid">
+        <h2>Log In</h2>
+        <div class="row">
+          <form
+            (submit)="onLogin(loginForm)"
+            #loginForm="ngForm"
+            class="form-group w-100"
+          >
+            <input
+              type="text"
+              class="form__input"
+              placeholder="email"
+              ngModel
+              #emailInput="ngModel"
+              name="email"
+              required
+            />
+            <input
+              type="password"
+              class="form__input"
+              placeholder="Password"
+              name="password"
+              ngModel
+              #passwordInput="ngModel"
+              required
+            />
+
+            <input type="submit" value="Submit" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

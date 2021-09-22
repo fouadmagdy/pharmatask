@@ -1,0 +1,14 @@
+<form (submit)="onCreateCountry(loginForm)" #loginForm="ngForm">
+  <div class="form-group">
+    <label>Country</label>
+    <input
+      type="text"
+      class="form-control"
+      ngModel
+      #countryInput="ngModel"
+      name="country"
+      required
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
